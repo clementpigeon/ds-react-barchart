@@ -1,0 +1,14 @@
+{
+  "presets": ["es2015", "stage-2", "react"],
+  "env": {
+    "build": {
+      "plugins": ["add-module-exports", "transform-es2015-modules-umd"]
+    },
+    "dev": {
+      "plugins": ["react-hot-loader/babel"]
+    },
+    "test": {
+      "plugins": [ "istanbul" ]
+    }
+  }
+}

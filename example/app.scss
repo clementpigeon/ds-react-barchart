@@ -1,0 +1,21 @@
+@import "~ds-sass-default";
+
+body {
+  background: $color-background-1;
+  padding: $space-normal;
+  color: $color-text-primary;
+}
+
+h1 {
+  font: $text-x-large;
+  padding-bottom: $space-normal;
+}
+
+h2 {
+  font: $text-large;
+  padding-bottom: $space-x-small;
+}
+
+section {
+  padding-bottom: $space-large;
+}

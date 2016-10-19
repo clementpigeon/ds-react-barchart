@@ -1,0 +1,82 @@
+@import '~ds-sass-default';
+
+.btn {
+  border: none;
+  text-transform: uppercase;
+  color: $color-text-reversed-primary;
+  background: $color-foreground-3;
+  font: $text-small;
+  padding: $space-x-small $space-small;
+
+  &:hover {
+    background: $color-foreground-2;
+  }
+
+  &:active {
+    background: $color-foreground-3;
+  }
+
+  &.disabled {
+    color: $color-text-reversed-disabled;
+    background: $color-foreground-4;
+    pointer-events: none;
+  }
+
+  &.primary {
+    background: $color-primary-1;
+
+    &:hover {
+      background: $color-primary-2;
+    }
+
+    &:active {
+      background: $color-primary-1;
+    }
+
+    &.disabled {
+      background-color: $color-primary-4;
+    }
+  }
+
+  &.outline {
+    color: $color-foreground-3;
+    background: $color-background-1;
+    border: 1px solid $color-foreground-3;
+
+    &:hover {
+      color: $color-foreground-2;
+      border-color: $color-foreground-2;
+    }
+
+    &:active {
+      color: $color-foreground-3;
+      border-color: $color-foreground-3;
+    }
+
+    &.disabled {
+      color: $color-foreground-4;
+      border-color: $color-foreground-4;
+    }
+
+    &.primary {
+      background: $color-background-1;
+      color: $color-primary-1;
+      border-color: $color-primary-1;
+
+      &:hover {
+        color: $color-primary-2;
+        border-color: $color-primary-2;
+      }
+
+      &:active {
+        color: $color-primary-1;
+        border-color: $color-primary-1;
+      }
+
+      &.disabled {
+        color: $color-primary-4;
+        border-color: $color-primary-4;
+      }
+    }
+  }
+}
