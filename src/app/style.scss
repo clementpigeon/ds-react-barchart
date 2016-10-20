@@ -1,0 +1,25 @@
+@import "~ds-sass-default";
+
+html, body {
+  background: $color-background-1;
+  color: $color-text-primary;
+  font: $text-normal;
+}
+
+#container {
+  box-sizing: border-box;
+  float: left;
+  padding: $space-x-large;
+  padding-bottom: $space-x-large * 3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  padding: $space-small 0;
+}
+
+h1 { font: $text-x-large; }
+h2 { font: $text-large; }
+h3 { font: $text-normal; }
+
+section { padding: $space-large $space-small; clear: both; }

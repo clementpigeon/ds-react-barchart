@@ -21,7 +21,7 @@ const config = {
     "react-hot-loader/patch",
     "webpack-dev-server/client?http://" + host + ":" + port,
     "webpack/hot/only-dev-server",
-    __dirname + "/example/index.js"
+    __dirname + "/src/index.js"
   ],
 
   output: {

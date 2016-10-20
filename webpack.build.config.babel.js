@@ -8,7 +8,7 @@ const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 const config = {
   ...baseConfig,
 
-  context: __dirname + "/src",
+  context: __dirname + "/src/lib",
 
   entry: [
     "./index.js"

@@ -1,6 +1,8 @@
 import React from "react";
 
-import Button from "../src";
+import Button from "../lib";
+
+import "./style.scss";
 
 const config = {
   label: "hello sunshine",
@@ -11,7 +13,7 @@ const config = {
 
 const App = () => (
   <div>
-    <h1>Button</h1>
+    <h1>ds-react-button</h1>
 
     <section>
       <h2>Regular Buttons</h2>

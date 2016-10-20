@@ -1,26 +1,27 @@
-import React, {PropTypes} from "react";
+import { AppContainer } from "react-hot-loader";
 
-import "./style.scss";
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./app";
 
-const Button = ({label, handleClick = () => {}, isOutline=false, isPrimary = false, isDisabled = false}) => (
-  <button
-    className={[
-      "btn",
-      isOutline ? "outline" : "",
-      isPrimary ? "primary" : "",
-      isDisabled ? "disabled" : ""
-    ].join(" ")}
-    onClick={handleClick}>
-      {label}
-  </button>
+const container = document.getElementById("container");
+
+ReactDOM.render(
+  <AppContainer>
+    <App />
+  </AppContainer>,
+  container
 );
 
-Button.propTypes = {
-  label: PropTypes.string.isRequired,
-  handleClick: PropTypes.func,
-  isOutline: PropTypes.bool,
-  isPrimary: PropTypes.bool,
-  isDisabled: PropTypes.bool
-};
+if (module.hot) {
+  module.hot.accept("./app", () => {
+    const NextApp = require("./app").default;
 
-export default Button;
+    ReactDOM.render(
+      <AppContainer>
+        <NextApp />
+      </AppContainer>,
+      container
+    );
+  });
+}

@@ -4,7 +4,7 @@ import {shallow, mount, render} from "enzyme";
 import {expect} from "chai";
 import sinon from "sinon";
 
-import Button from "../../src/index";
+import Button from "../../src/lib";
 
 // Demo tests
 
@@ -54,6 +54,15 @@ describe("Basic Tests", () => {
     );
     wrapper.find("button").simulate("click");
     expect(buttonClick.calledOnce).to.equal(true);
+  });
+
+  it("simulates button's click event on a disabled button", () => {
+    const buttonClick = sinon.spy();
+    const wrapper = shallow(
+      <Button isDisabled handleClick={buttonClick} />
+    );
+    wrapper.find("button").simulate("click");
+    expect(buttonClick.called).to.equal(false);
   });
 });
 
